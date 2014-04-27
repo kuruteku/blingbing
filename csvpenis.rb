@@ -24,6 +24,7 @@ class Language
 
   attr_reader :name
   def initialize(array)
+    array[0][0].strip!
     @name = array[0][0]
     @words = []
     array[1..array.length-1].each do |row|
